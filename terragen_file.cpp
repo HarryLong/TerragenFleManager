@@ -17,6 +17,16 @@ TerragenFile::~TerragenFile()
 
 }
 
+float TerragenFile::getAbsoluteWidth()
+{
+    return m_header_data.scale * m_header_data.width;
+}
+
+float TerragenFile::getAbsoluteDepth()
+{
+    return m_header_data.scale * m_header_data.depth;
+}
+
 bool TerragenFile::write(const std::string & filename)
 {
     return TerragenFileManager::writeTerragen(*this, filename);

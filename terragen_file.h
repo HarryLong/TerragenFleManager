@@ -21,6 +21,9 @@ public:
     void summarize();
     bool write(const std::string & filename);
 
+    float getAbsoluteWidth();
+    float getAbsoluteDepth();
+
     float & operator()(int x, int z){
         return m_height_data[z * m_header_data.width + x];
     }
